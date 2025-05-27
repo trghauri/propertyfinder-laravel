@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-# propertyfinder-laravel
-Laravel SDK for PropertyFinder Enterprise API with automatic token management and support for multiple companies.
-=======
+
 # PropertyFinder API Laravel Package
 
 A Laravel-friendly PHP package for interacting with the **PropertyFinder Enterprise API**, including token management, listings, users, profiles, leads, and more.
@@ -71,4 +68,3 @@ $response = $listings->createListing([...]);
 ## 📄 License
 
 MIT — free for commercial or personal use
->>>>>>> 02ab88313e5ab225caee359f7ab565ba62b670c8
