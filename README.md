@@ -1,53 +1,55 @@
-PropertyFinder API Laravel Package
-A Laravel-friendly PHP package for interacting with the PropertyFinder Enterprise API, featuring token management, listings, users, profiles, leads, and more.
+<<<<<<< HEAD
+# propertyfinder-laravel
+Laravel SDK for PropertyFinder Enterprise API with automatic token management and support for multiple companies.
+=======
+# PropertyFinder API Laravel Package
 
-Built to support multiple companies with automated token caching, clean endpoint classes, and seamless Laravel integration.
+A Laravel-friendly PHP package for interacting with the **PropertyFinder Enterprise API**, including token management, listings, users, profiles, leads, and more.
 
-📦 Features
-🔐 Automatic token management with per-company token caching
+Built for multi-company support with **automated token caching**, clean endpoint classes, and Laravel integration.
 
-🧱 Clean, class-based structure (Auth, Listings, Users, etc.)
+## 📦 Features
 
-📍 Full support for major endpoints: listings, leads, users, webhooks, verifications
+- 🔐 Automatic token management (caches token per company)
+- 🧱 Clean class-based structure (Auth, Listings, Users, etc.)
+- 📍 Supports all major endpoints: listings, leads, users, webhooks, verifications
+- ⚙️ Laravel cache + config support
+- 🚀 Simple to install and use
 
-⚙️ Integrates with Laravel cache and config
+## 🛠 Installation
 
-🚀 Easy installation and usage
+1. Add the repository to your Laravel project:
 
-🛠 Installation
-Add the package repository to your Laravel project's composer.json:
-
-json
-Copy
-Edit
+```json
 "repositories": [
   {
     "type": "vcs",
-    "url": "https://github.com/trghauri/propertyfinder-api"
+    "url": "https://github.com/trghauri/propertyfinder-laravel"
   }
 ],
 "require": {
   "propertyfinder/api": "dev-main"
 }
-Run the composer update command:
+```
 
-bash
-Copy
-Edit
+2. Run:
+```bash
 composer update
-🔐 Token Management
-Retrieve a valid token using the TokenManager. Tokens are automatically refreshed every 30 minutes:
+```
 
-php
-Copy
-Edit
+## 🔐 Token Management
+
+Use the `TokenManager` to get a valid token (auto-refreshes every 30 minutes):
+
+```php
 use PropertyFinderApi\TokenManager;
 
 $token = TokenManager::getToken($company->id, $company->api_key, $company->api_secret);
-🚀 Usage Example
-php
-Copy
-Edit
+```
+
+## 🚀 Usage Example
+
+```php
 use PropertyFinderApi\Listings;
 use PropertyFinderApi\TokenManager;
 
@@ -56,11 +58,17 @@ $token = TokenManager::getToken($company->id, $company->api_key, $company->api_s
 $listings = new Listings($token);
 
 $response = $listings->createListing([...]);
-📁 Class Map
-Feature	Class	Example Method
-Auth	Auth	issueToken()
-Token Mgmt	TokenManager	getToken()
-HTTP Client	HttpClient	get(), post()
+```
 
-📄 License
+## 📁 Class Map
+
+| Feature      | Class                  | Example Method                |
+|--------------|------------------------|-------------------------------|
+| Auth         | `Auth`                 | `issueToken()`                |
+| Token Mgmt   | `TokenManager`         | `getToken()`                  |
+| Http Client  | `HttpClient`           | `get()`, `post()`             |
+
+## 📄 License
+
 MIT — free for commercial or personal use
+>>>>>>> 02ab88313e5ab225caee359f7ab565ba62b670c8
