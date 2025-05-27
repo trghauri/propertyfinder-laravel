@@ -1,0 +1,15 @@
+{
+    "name": "propertyfinder/api",
+    "description": "Laravel SDK for PropertyFinder Enterprise API with automatic token management and support for multiple companies.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "PropertyFinderApi\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=8.0",
+        "illuminate/support": "^9.0|^10.0"
+    }
+}
