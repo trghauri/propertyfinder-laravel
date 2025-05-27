@@ -11,7 +11,7 @@ class HttpClient
 
     public function __construct(?string $token = null)
     {
-        $this->baseUrl = config('propertyfinder.api_url');
+        $this->baseUrl = "https://atlas.propertyfinder.com/";
         $this->token = $token ?? config('propertyfinder.api_token');
     }
 
